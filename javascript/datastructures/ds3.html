@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    <script>
+        /**
+         * Arrays
+         */
+        var color = ["red", "green", "blue"];
+        printArray(color);
+
+        //notice is that the second object here
+        // is undefined
+        var animals = ["cat", , "dog"]
+        printArray(animals);
+
+        // notice that the size of the array is only 2
+        // the last comma is ignored.
+        var carnivores = ["tiger", "lion",];
+        printArray(carnivores);
+
+        // notice that the size of the array is 3
+        // the first comma is considered
+        var herbiovores = [, "tiger", "lion",];
+        printArray(herbiovores);
+
+        //array also takes a mixed set of data types
+        var mixed = [1, "apple", 2, "orange",];
+        printArray(mixed);
+
+        /**
+         * print array
+         * @param arr
+         */
+        function printArray(arr) {
+            var arrayLength = arr.length;
+            console.log("Array Length: " + arrayLength);
+            for (var i = 0; i < arrayLength; i++) {
+                console.log(" i : " + i + " : " + arr[i]);
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
