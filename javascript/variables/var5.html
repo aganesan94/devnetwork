@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+    <script>
+
+        /**
+         * Note here that the following statements
+         * by their comments.
+         * */
+        function forLoop() {
+            /* i is visible here due to variable hoisting */
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+                /* i is accessible here */
+            }
+            /* i is accessible here as well */
+        }
+
+        // ECMASCRIPT 6 defines the use of let keyword to constrain its
+        // use within a block
+
+        function forLoop() {
+            /* i is not visible here. */
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                /* i is scoped to this block and is visible only within this block*/
+            }
+            /* i is not visible here */
+        }
+    </script>
+</head>
+<body>
+This is a sample page showing different types of variable declarations.
+</body>
+</html>
