@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /**
+         * 6. Declared variables are a non-configurable property of their execution context whether global or function.
+         *  However, undeclared variables are configurable. the reason why it is a good practice to declare variables.
+         *
+         */
+
+        var name = 1;
+        age = 2;
+
+        delete this.name;
+        delete this.age;
+
+        console.log(name); // executes fine if not in strict mode.
+        console.log(age); //throws a reference error
+
+
+    </script>
+</head>
+<body>
+This is a sample page.
+</body>
+</html>

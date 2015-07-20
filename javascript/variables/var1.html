@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /* Variable declarations */
+
+
+        /*
+         1. Variables are either global or local.
+         2. variable are declared with the name and a value. The value is optional.
+         3. The var keyword is used to declare a variable.
+         4. Assigning a value to an undeclared variable implicitly creates it as a global variable (it becomes a property of the global object) when the assignment is executed.
+         5. Declared variables are created before any code is executed. Undeclared variables do not exist until the code assigning to them is executed.
+         */
+
+        function foo() {
+            name = "FooBar"; // These variables do not exist until the code is executed.
+            var age = 20; // Declared before any code is executed.
+        }
+
+        foo();
+        console.log(name); // this has been assigned to the global namespace.
+        console.log(age); // This  throws a Uncaught Reference Error. age is not defined.
+
+    </script>
+</head>
+<body>
+This is a sample page.
+</body>
+</html>
