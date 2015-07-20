@@ -24,10 +24,28 @@
         console.log(age); // note the value of age is overridden and shows up as 4
 
         //case 3
+        /*
+         * Below given code is the same as the following
+         * var x;
+         * console.log(x === undefined); // logs "true"
+         * x = 3;
+         */
         console.log(school === undefined); // logs "true"
         var school = "fooschool";
 
+
         //case 4
+        /**
+         * Below given code is the same as the following
+         *
+         * var myvar = "my value";
+         (function() {
+              var myvar;
+              console.log(myvar); // undefined
+              myvar = "local value";
+            })();
+         *
+         */
         var className = "first grade";
         (function () {
             console.log(className); // undefined
