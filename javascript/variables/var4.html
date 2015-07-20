@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+    <script>
+
+        /**
+         * Variable declarations
+         *
+         */
+
+        // add a variable name and initialize a value
+        var school = "myschool";
+        console.log(school);
+
+        // add a name, followed by comma and age
+        var name = "hello", age = 2;
+        console.log(name, age);
+
+        // alternatives to declare the following
+        // standard way are described below
+        var age1 = 25;
+        var age2 = age1;
+        console.log(age1, age2);
+
+        //The above can be declared as follows
+        var name1, name2 = name1 = "hello";
+        console.log(name1, name2);
+
+        //Note when the above statement is written like below
+        //it throws a unexpected result.
+        //the reason for that being that the name4 is assigned to an undefined name3 after which name is
+        //initialized.
+        var name3, name4 = name3, name3 = "foo";
+        console.log(name3, name4); //name4 is undefined.
+
+        //The below code shows how the above kind of variable declarations
+        // in a global and local scenario and its impacts.
+        var age2 = 30;
+
+        function showAge() {
+            var age2 = age3 = 1; // age2 is declared locally. age3 is in the global namespace
+            //note that age2 is declared locally so inherits the value in the local.
+            console.log(age2, age3);
+        }
+        showAge();
+        console.log(age2, age3);
+
+
+        //getting more complex with global local functions in case of inner and outer functions.
+        var studentname = "foo";
+        function schools() {
+            var schoolname = "fooschool";
+
+            function classes() {
+                classname = "1st grade"; //declared globally
+                studentname = "fooOverriden"; //declared globally so overriding is possible.
+                schoolname = "fooSchoolOverriden";//schoolname is a variable in the outer function which can be accessed in the inner function.
+            }
+
+            classes();
+            console.log(studentname, schoolname, classname);
+        }
+
+        schools();
+        console.log(studentname, classname); // studentname and //classname are global declarations
+        console.log(studentname, schoolname);//schoolname throws undefined error
+
+
+    </script>
+</head>
+<body>
+This is a sample page showing different types of variable declarations.
+</body>
+</html>
