@@ -16,6 +16,8 @@
          3. The var keyword is used to declare a variable.
          4. Assigning a value to an undeclared variable implicitly creates it as a global variable (it becomes a property of the global object) when the assignment is executed.
          5. Declared variables are created before any code is executed. Undeclared variables do not exist until the code assigning to them is executed.
+         6. Variable must start with one of the following: a letter, dollar sign or underscore ONLY
+         7. Accessing an unreferenced variable will result in a ReferenceError exception.
          */
 
         function foo() {

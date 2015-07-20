@@ -13,15 +13,26 @@
          *
          */
 
+            //case 1
         name = "hello";
         var name;
-
         console.log(name); // the value of the name is "hello"
 
+        //case 2
         age = 3;
         var age = 4;
-
         console.log(age); // note the value of age is overridden and shows up as 4
+
+        //case 3
+        console.log(school === undefined); // logs "true"
+        var school = "fooschool";
+
+        //case 4
+        var className = "first grade";
+        (function () {
+            console.log(className); // undefined
+            var className = "second grade";
+        })();
 
     </script>
 </head>

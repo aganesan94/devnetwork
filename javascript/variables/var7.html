@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+    <script>
+        /**
+         * Variable evaluation in specific cases.
+         */
+
+        //Case 1:
+        var name;
+        if (name === undefined) {
+            console.log("Name is undefined");
+        } else {
+            console.log("Name is defined");
+        }
+
+        //Case 2:undefined array
+        var arr = [];
+        if (!arr[0]) {
+            console.log("Array Definition is not present");
+        } else {
+            console.log("Array Definition is present");
+        }
+
+        //Case 3:undefined variable and addition operation on that variable.
+        var num;
+        console.log(num + 2);
+
+        //Case 4: Null variable
+        var someNullValue = null;
+        console.log(someNullValue + 2);
+
+    </script>
+</head>
+<body>
+This is a sample page showing different types of variable declarations.
+</body>
+</html>
