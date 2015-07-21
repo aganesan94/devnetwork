@@ -44,7 +44,7 @@
         isItFinite();
         isItInteger();
         isItSafeInteger();
-        convertStringToNumber();
+        convertToNumber();
 
         /**
          * isItInteger: check if the given argument is an integer
@@ -71,9 +71,9 @@
         }
 
         /**
-         * convertStringToNumber: converts String to a float and an integer.
+         * convertToNumber: converts String to a float and an integer.
          */
-        function convertStringToNumber() {
+        function convertToNumber() {
             var floater = parseFloat("25.6");
             var inter = parseInt("25");
             var inter1 = parseInt("2522", 10); //10 specifies decimal numeral system which is commonly used.
@@ -81,7 +81,14 @@
             console.log(inter);
             console.log(inter1);
 
-            console.log("")
+            var date = new Date('February 13, 1985 11:00:00');
+            console.log(Number(date)); //returns time in milliseconds format
+
+            console.log("convert to number: Number(123):" + Number(123));
+            console.log("convert to number: Number(0):" + Number(0));
+            console.log("convert to number: Number(\"abc\"):" + Number("abc"));
+            console.log("convert to number: Number(\"25\"):" + Number("25"));
+
         }
 
         /**
