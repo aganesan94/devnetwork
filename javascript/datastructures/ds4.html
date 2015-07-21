@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+    <script>
+
+        /**
+         * Number object allows the use of numerical operations
+         * in javascript programming.
+         *
+         */
+
+        //instantiating a number object.
+        var number = new Number(3);
+        console.log(number.toPrecision(1));
+
+        //The MAX_VALUE = 1.79E+308 and is the largest possible representable number
+        console.log("Max Value " + Number.MAX_VALUE);
+
+        //The MIN VALUE = 5e-324 is NOT the smallest possible representable negative number but the
+        // smallest possible positive number closer to 0.
+        console.log("Min Value " + Number.MIN_VALUE);
+
+        //represents not a number (NAN).
+        console.log("NAN Value " + Number.NaN);
+
+        // The following methods are used in case a condition needs to be verified to return a finite number.
+        console.log("Negative Infinity Value " + Number.NEGATIVE_INFINITY);
+        console.log("Positive Infinity Value " + Number.POSITIVE_INFINITY);
+
+
+        //The MAX_SAFE_INTEGER constant has a value of -9007199254740991. It has a range between (-2^53-1) to (2^53-1)
+        console.log("Min Safe Integer Value " + Number.MIN_SAFE_INTEGER);
+
+        //The MAX_SAFE_INTEGER constant has a value of 9007199254740991. It has a range between (-2^53-1) to (2^53-1)
+        console.log("Max Safe Integer Value " + Number.MAX_SAFE_INTEGER);
+
+        //.2204460492503130808472633361816E-16 or 2^-52
+        console.log("Epsilon Value " + Number.EPSILON);
+
+
+        isNaN();
+        isItFinite();
+        isItInteger();
+        isItSafeInteger();
+        convertStringToNumber();
+
+
+        function isItInteger() {
+
+        }
+
+        function isItSafeInteger() {
+
+        }
+
+        function convertStringToNumber() {
+
+        }
+
+        /**
+         * isFinite: tests if the value is finite
+         *
+         **/
+        function isItFinite() {
+            console.log("isFinite(Number.Infinity):" + isFinite(+Infinity) + " : " + isFinite(-Infinity));
+            console.log("isFinite(Number.NaN):" + isFinite(Number.NaN));
+
+            console.log("isFinite(Number.MAX_VALUE):" + isFinite(Number.MAX_VALUE));
+            console.log("isFinite(Number.MIN_VALUE):" + isFinite(Number.MIN_VALUE));
+            console.log("isFinite(Number.MIN_SAFE_INTEGER):" + isFinite(Number.MIN_SAFE_INTEGER));
+            console.log("isFinite(Number.MAX_SAFE_INTEGER):" + isFinite(Number.MAX_SAFE_INTEGER));
+            console.log("isFinite(Number.EPSILON):" + isFinite(Number.EPSILON));
+        }
+
+        /**
+         * The method shows all possibilities of usage of isNaN
+         */
+        function isNaN() {
+            //Methods available in Number
+
+            //What is NAN and not a NAN
+            // Note: the comparison operators (== and ===) always return false when checking for if NAN, hence the need for this method.
+            console.log("Number.isNan(true) :" + Number.isNaN(true));// Boolean value always returns false
+            console.log("Number.isNan(false) :" + Number.isNaN(false));// Boolean value always returns false
+            console.log("Number.isNan(\"\") :" + Number.isNaN(""));// Empty String value always returns false
+            console.log("Number.isNan(13) v" + Number.isNaN(13));// Integer value always returns false
+            console.log("Number.isNan(13.23) :" + Number.isNaN(13.23));// Integer value always returns false
+            console.log("Number.isNan(\"foo\") :" + Number.isNaN("foo"));// String value always returns false
+            console.log("Number.isNan(null) :" + Number.isNaN(null));// null value always returns false
+            console.log("Number.isNan(undefined) :" + Number.isNaN(undefined));// undefined value always returns false
+            console.log("Number.isNan({}) :" + Number.isNaN({}));// empty json string value always returns false
+            console.log("Number.isNan([\"red\",\"green\"]) :" + Number.isNaN(["red", "green"]));// array value always returns false
+            console.log("Number.isNan(Number.NaN) :" + Number.isNaN(Number.NaN));// String value always returns false
+            console.log("Number.isNan(0/0) :" + Number.isNaN(0 / 0));// String value always returns false
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
