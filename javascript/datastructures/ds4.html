@@ -46,21 +46,46 @@
         isItSafeInteger();
         convertStringToNumber();
 
-
+        /**
+         * isItInteger: check if the given argument is an integer
+         */
         function isItInteger() {
-
-        }
-
-        function isItSafeInteger() {
-
-        }
-
-        function convertStringToNumber() {
-
+            console.log("Number.isInteger(1):" + Number.isInteger(1));
+            console.log("Number.isInteger(1.0):" + Number.isInteger(1.0));
+            console.log("Number.isInteger(-1.0):" + Number.isInteger(-1.0));
+            console.log("Number.isInteger(-1):" + Number.isInteger(-1));
+            console.log("Number.isInteger(\"1\"):" + Number.isInteger("1"));
+            console.log("Number.isInteger(\"1.0\"):" + Number.isInteger("1.0"));
+            console.log("Number.isInteger(\"-1.0\"):" + Number.isInteger("-1.0"));
+            console.log("Number.isInteger(0/0):" + Number.isInteger(0 / 0));
         }
 
         /**
-         * isFinite: tests if the value is finite
+         * isItInteger: check if the given argument is a safe integer, meaning
+         * it lies between 2^53-1 and -2^53 -1
+         */
+        function isItSafeInteger() {
+            console.log("Number.isSafeInteger(Math.pow(2,53)):" + Number.isSafeInteger(Math.pow(2, 53)));
+            console.log("Number.isSafeInteger(0/0):" + Number.isSafeInteger(0 / 0));
+            console.log("Number.isSafeInteger(3):" + Number.isSafeInteger(3));
+        }
+
+        /**
+         * convertStringToNumber: converts String to a float and an integer.
+         */
+        function convertStringToNumber() {
+            var floater = parseFloat("25.6");
+            var inter = parseInt("25");
+            var inter1 = parseInt("2522", 10); //10 specifies decimal numeral system which is commonly used.
+            console.log(floater);
+            console.log(inter);
+            console.log(inter1);
+
+            console.log("")
+        }
+
+        /**
+         * isItFinite: tests if the value is finite
          *
          **/
         function isItFinite() {
